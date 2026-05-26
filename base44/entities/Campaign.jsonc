@@ -1,0 +1,119 @@
+{
+  "name": "Campaign",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Campaign name"
+    },
+    "promotion_type": {
+      "type": "string",
+      "enum": [
+        "product_discount",
+        "shipping_discount",
+        "bundle_discount",
+        "coupon_discount",
+        "customer_group_discount"
+      ],
+      "description": "Type of promotion"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Active",
+        "Draft",
+        "Scheduled",
+        "Paused",
+        "Ended"
+      ],
+      "default": "Draft",
+      "description": "Campaign status"
+    },
+    "target_products": {
+      "type": "string",
+      "description": "Comma-separated SKUs"
+    },
+    "target_segment": {
+      "type": "string",
+      "description": "Target customer segment"
+    },
+    "discount_type": {
+      "type": "string",
+      "enum": [
+        "pct",
+        "fixed"
+      ],
+      "description": "Discount type"
+    },
+    "discount_value": {
+      "type": "number",
+      "description": "Discount value"
+    },
+    "duration_days": {
+      "type": "number",
+      "description": "Campaign duration in days"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Start date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "End date"
+    },
+    "budget_cap": {
+      "type": "number",
+      "description": "Maximum budget"
+    },
+    "min_margin_pct": {
+      "type": "number",
+      "description": "Minimum margin threshold"
+    },
+    "revenue_actual": {
+      "type": "number",
+      "description": "Actual revenue generated"
+    },
+    "orders_actual": {
+      "type": "number",
+      "description": "Actual orders count"
+    },
+    "aov_actual": {
+      "type": "number",
+      "description": "Actual average order value"
+    },
+    "discount_cost_actual": {
+      "type": "number",
+      "description": "Actual discount cost"
+    },
+    "redemptions": {
+      "type": "number",
+      "description": "Number of redemptions"
+    },
+    "margin_impact_pct": {
+      "type": "number",
+      "description": "Margin impact percentage"
+    },
+    "performance_score": {
+      "type": "number",
+      "description": "Performance score 0-100"
+    },
+    "is_ai_recommended": {
+      "type": "boolean",
+      "description": "Whether AI recommended this"
+    },
+    "ai_reasoning": {
+      "type": "string",
+      "description": "AI reasoning text"
+    },
+    "guardrails_applied": {
+      "type": "string",
+      "description": "Applied guardrails"
+    }
+  },
+  "required": [
+    "name",
+    "promotion_type"
+  ]
+}

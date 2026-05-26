@@ -1,0 +1,30 @@
+{
+  "name": "AuditLog",
+  "type": "object",
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the action occurred"
+    },
+    "user_name": {
+      "type": "string",
+      "description": "User who performed the action"
+    },
+    "action": {
+      "type": "string",
+      "description": "Action type (e.g. Created, Deployed, Paused, Resumed, Cancelled, Draft Saved, Simulated, Submitted for Approval, Approved, Rejected, Conflict Resolved, Deleted)"
+    },
+    "campaign_name": {
+      "type": "string",
+      "description": "Related campaign name"
+    },
+    "details": {
+      "type": "string",
+      "description": "Action details"
+    }
+  },
+  "required": [
+    "action"
+  ]
+}

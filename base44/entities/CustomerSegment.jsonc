@@ -1,0 +1,47 @@
+{
+  "name": "CustomerSegment",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Segment name"
+    },
+    "size": {
+      "type": "number",
+      "description": "Number of customers in segment"
+    },
+    "description": {
+      "type": "string",
+      "description": "Segment description"
+    },
+    "avg_order_value": {
+      "type": "number",
+      "description": "Average order value"
+    },
+    "last_promo_days_ago": {
+      "type": "number",
+      "description": "Days since last promotion"
+    },
+    "recency_days": {
+      "type": "number",
+      "description": "Average recency in days"
+    },
+    "frequency_per_month": {
+      "type": "number",
+      "description": "Average purchase frequency per month"
+    },
+    "churn_risk": {
+      "type": "string",
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "description": "Churn risk level"
+    }
+  },
+  "required": [
+    "name",
+    "size"
+  ]
+}

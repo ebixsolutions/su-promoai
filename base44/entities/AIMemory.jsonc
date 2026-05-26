@@ -1,0 +1,51 @@
+{
+  "name": "AIMemory",
+  "type": "object",
+  "properties": {
+    "memory_type": {
+      "type": "string",
+      "enum": [
+        "segment_response",
+        "promotion_type_performance",
+        "timing_pattern",
+        "merchant_preference",
+        "failed_recommendation"
+      ],
+      "description": "Type of memory record"
+    },
+    "key": {
+      "type": "string",
+      "description": "Identifier key for this memory entry"
+    },
+    "value": {
+      "type": "string",
+      "description": "JSON stringified learned data"
+    },
+    "confidence": {
+      "type": "number",
+      "description": "Confidence score 0-100"
+    },
+    "sample_size": {
+      "type": "number",
+      "description": "Number of campaigns this is based on"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date last updated"
+    },
+    "trend": {
+      "type": "string",
+      "enum": [
+        "improving",
+        "stable",
+        "declining"
+      ],
+      "description": "Performance trend"
+    }
+  },
+  "required": [
+    "memory_type",
+    "key"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "sku": {
+      "type": "string",
+      "description": "SKU code"
+    },
+    "price": {
+      "type": "number",
+      "description": "Retail price"
+    },
+    "cost": {
+      "type": "number",
+      "description": "Cost price"
+    },
+    "margin_pct": {
+      "type": "number",
+      "description": "Margin percentage"
+    },
+    "stock_qty": {
+      "type": "number",
+      "description": "Current stock quantity"
+    },
+    "sales_velocity": {
+      "type": "number",
+      "description": "Units sold per week"
+    },
+    "category": {
+      "type": "string",
+      "description": "Product category"
+    },
+    "is_slow_moving": {
+      "type": "boolean",
+      "description": "Whether product is slow-moving"
+    },
+    "is_protected": {
+      "type": "boolean",
+      "description": "Whether product is price-protected"
+    }
+  },
+  "required": [
+    "name",
+    "sku",
+    "price"
+  ]
+}

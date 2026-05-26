@@ -1,0 +1,34 @@
+{
+  "name": "AIRecommendationLog",
+  "type": "object",
+  "properties": {
+    "goal": {
+      "type": "string",
+      "description": "The user goal or prompt that triggered the recommendation"
+    },
+    "prompt_used": {
+      "type": "string",
+      "description": "The full prompt sent to Claude"
+    },
+    "recommendation_json": {
+      "type": "string",
+      "description": "JSON string of all recommendations returned by Claude"
+    },
+    "confidence_score": {
+      "type": "number",
+      "description": "Average confidence score across recommendations"
+    },
+    "was_deployed": {
+      "type": "boolean",
+      "description": "Whether any recommendation was deployed",
+      "default": false
+    },
+    "deployed_campaign_id": {
+      "type": "string",
+      "description": "ID of the campaign created from this recommendation"
+    }
+  },
+  "required": [
+    "goal"
+  ]
+}

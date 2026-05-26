@@ -1,0 +1,100 @@
+{
+  "name": "Recommendation",
+  "type": "object",
+  "properties": {
+    "objective": {
+      "type": "string",
+      "description": "Promotion objective"
+    },
+    "promotion_type": {
+      "type": "string",
+      "description": "Type of promotion recommended"
+    },
+    "target_products": {
+      "type": "string",
+      "description": "Target product SKUs"
+    },
+    "target_segment": {
+      "type": "string",
+      "description": "Target customer segment"
+    },
+    "discount_value": {
+      "type": "number",
+      "description": "Recommended discount value"
+    },
+    "duration_days": {
+      "type": "number",
+      "description": "Recommended duration"
+    },
+    "expected_revenue_uplift": {
+      "type": "string",
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "description": "Expected revenue uplift"
+    },
+    "expected_margin_cost": {
+      "type": "string",
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "description": "Expected margin cost"
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "description": "Risk level"
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "AI reasoning"
+    },
+    "guardrails_applied": {
+      "type": "string",
+      "description": "Applied guardrails"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "accepted",
+        "rejected",
+        "deployed"
+      ],
+      "default": "pending",
+      "description": "Status"
+    },
+    "confidence_score": {
+      "type": "number",
+      "description": "AI confidence score 0-100"
+    },
+    "scoring_breakdown": {
+      "type": "string",
+      "description": "JSON string of scoring breakdown"
+    },
+    "predicted_revenue_base": {
+      "type": "number",
+      "description": "Base scenario predicted revenue"
+    },
+    "predicted_revenue_optimistic": {
+      "type": "number",
+      "description": "Optimistic scenario predicted revenue"
+    },
+    "predicted_revenue_pessimistic": {
+      "type": "number",
+      "description": "Pessimistic scenario predicted revenue"
+    }
+  },
+  "required": [
+    "objective",
+    "promotion_type"
+  ]
+}
